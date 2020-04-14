@@ -39,6 +39,14 @@ const NavBar = () => {
                   Sobre-nós
                 </a>
               </li>
+              <li className="md:hidden">
+              <a
+                  className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                  href="/register"
+                >
+                  Login ou Cadastre-se
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -60,7 +68,10 @@ const NavBar = () => {
           </a>
         </div>
         <div className="order-2 md:order-3 flex items-center" id="nav-content">
-          <a className="inline-block no-underline hover:text-black text-gray-700 hover:underline" href="/register">
+          <a
+            className="inline-block no-underline hover:text-black text-gray-700 hover:underline"
+            href="/register"
+          >
             Login ou Cadastre-se
           </a>
           <a

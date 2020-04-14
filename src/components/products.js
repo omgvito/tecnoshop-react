@@ -27,13 +27,13 @@ class Products extends Component {
 
     return (
       <section className="bg-white py-8" id="others">
-      <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl text-center">
-        Outros produtos:
-      </h1>
-    <div className="container mx-auto flex items-center justify-center flex-wrap pt-4">
-      {produtos}
-    </div>
-  </section>
+        <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl text-center">
+          Outros produtos:
+        </h1>
+        <div className="container mx-auto flex items-center justify-center flex-wrap pt-4">
+          {produtos}
+        </div>
+      </section>
     );
   }
 }

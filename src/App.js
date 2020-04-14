@@ -1,33 +1,33 @@
 import React, { Component } from "react";
-import "react-multi-carousel/lib/styles.css";
+import { Switch, Route, Link } from "react-router-dom";
 
 //CSS
 import "./App.css";
 
 //Components
+// import Default from "./pages/default";
 import NavBar from "./components/navbar";
-import Inicial from "./components/inicial";
-import NewProducts from "./components/newProducts";
-import Products from "./components/products";
 import Footer from "./components/footer";
-import ScrollDown from "./components/scrollDown";
-
-//Dados
-import data from "./components/data/data";
-import dataNew from "./components/data/newdata";
+import ProductList from "./pages/ProductList";
+import Details from "./pages/Details";
+import Cart from "./pages/Cart";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 class App extends Component {
   render() {
     return (
       <>
         <NavBar />
-        <Inicial />
-        <ScrollDown href={"#shop"}/>
-        <div className="mt-48">
-          <NewProducts dataNew={dataNew} />
-          <Products data={data} />
-          <Footer />
-        </div>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/details" component={Details} />
+          <Route path="/cart" component={Cart} />
+          {/* <Route component={Default} /> */}
+            <Route path="/" component={ProductList} />
+        </Switch>
+        <Footer />
       </>
     );
   }

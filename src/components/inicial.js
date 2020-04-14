@@ -12,7 +12,7 @@ class Landing extends Component {
             Aqui temos uma grande variedade de produtos de informática com os
             melhores preços.
           </p>
-          <div class="flex m-3 md:w-aut md:hidden sm:hidden lg:flex xl:flex">
+          <div class="flex m-3 md:self-center xl:self-auto">
             <a href="/login">
             <button class="bg-white text-gray-800 font-bold rounded border-l-2 border-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
               <span class="mr-2">Cadastre-se</span>
