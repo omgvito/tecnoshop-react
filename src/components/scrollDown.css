@@ -1,0 +1,74 @@
+.containerp {
+    z-index: 2;
+}
+
+.containerp.dark-bg {
+  background-color: #333;
+}
+.scroll-btn.dark {
+  height: 40px;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.scroll-btn.dark i {
+  width: 24px;
+  height: 40px;
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #333;
+  border-radius: 12px;
+  transition: inherit;
+  z-index: -5;
+  overflow: hidden;
+}
+.scroll-btn.dark i:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  border-radius: 100%;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  transition: inherit;
+}
+.scroll-btn.dark p {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  margin-top: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transition: inherit;
+}
+.scroll-btn.dark:hover i {
+  background-color: #333;
+}
+.scroll-btn.dark i:before {
+  animation: scrollDown 1s ease infinite;
+  background-color: #000;
+}
+
+.scroll-btn.dark:hover i:before {
+  background-color: white;
+}
+@keyframes scrollDown {
+  from {
+    top: -2px;
+    opacity: 1;
+  }
+  to {
+    top: 40px;
+    opacity: 1;
+
+  }
+}

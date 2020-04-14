@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "react-multi-carousel/lib/styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//CSS
+import "./App.css";
+
+//Components
+import NavBar from "./components/navbar";
+import Inicial from "./components/inicial";
+import NewProducts from "./components/newProducts";
+import Products from "./components/products";
+import Footer from "./components/footer";
+import ScrollDown from "./components/scrollDown";
+
+//Dados
+import data from "./components/data/data";
+import dataNew from "./components/data/newdata";
+
+class App extends Component {
+  render() {
+    return (
+      <>
+        <NavBar />
+        <Inicial />
+        <ScrollDown href={"#shop"}/>
+        <div className="mt-48">
+          <NewProducts dataNew={dataNew} />
+          <Products data={data} />
+          <Footer />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
