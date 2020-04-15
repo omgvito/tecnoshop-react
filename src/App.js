@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 //CSS
 import "./App.css";
 
 //Components
-// import Default from "./pages/default";
+import Default from "./pages/Default";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
 import ProductList from "./pages/ProductList";
@@ -24,8 +24,9 @@ class App extends Component {
           <Route path="/register" component={Register} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
-          {/* <Route component={Default} /> */}
-            <Route path="/" component={ProductList} />
+          <Route exact path="/" component={ProductList} />
+          <Route path="/404" component={Default} />
+          <Redirect to="/404" />
         </Switch>
         <Footer />
       </>

@@ -38,7 +38,7 @@ class Login extends Component {
               <input
                 type="submit"
                 defaultValue="Log In"
-                className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
+                className="bg-white text-gray-800 font-bold rounded border-l-2 border-gray-900 hover:border-gray-900 hover:bg-gray-900 hover:text-white shadow-md py-2 px-6 inline-flex items-center mt-5"
               />
             </form>
             <div className="text-center pt-12 pb-12">

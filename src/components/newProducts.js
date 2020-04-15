@@ -1,14 +1,13 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class NewProducts extends Component {
   render() {
-    const { dataNew } = this.props;
-
-    let newProdutos = dataNew.map((newProducts) => {
-
+    const { data } = this.props;
+    let newProdutos = data.map((newProducts) => {
       return (
         <div className="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-          <a href="#">
+          <Link to="/details">
             <img className="hover:grow hover:shadow-lg" src={newProducts.img} />
             <div className="pt-3 flex items-center justify-between">
               <p className>{newProducts.nome}</p>
@@ -21,55 +20,55 @@ class NewProducts extends Component {
               </svg>
             </div>
             <p className="pt-1 text-gray-900">{newProducts.preco}</p>
-          </a>
+          </Link>
         </div>
       );
     });
 
     return (
       <div>
-      <nav id="shop" className="w-full z-30 top-0 px-6 py-1">
-              <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-                <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ">
-                  Nossa loja
-                </h1>
-                <div className="flex items-center" id="store-nav-content">
-                  <select
-                    className="pl-3 inline-block no-underline hover:text-black"
-                    onClick={this.handleClick}
-                  >
-                    <i className="fas fa-sort fa-lg"></i>
-                    <option value="">Relevância</option>
-                    <option value="">Preço: Menor para Maior</option>
-                    <option value="">Preço: Maior para Menor</option>
-                  </select>
-                  <h1
-                    className="pl-3 inline-block no-underline hover:text-black"
-                    href="#"
-                  >
-                    <svg
-                      className="fill-current hover:text-black"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                    </svg>
-                  </h1>
-                </div>
-              </div> 
+        <nav id="shop" className="w-full z-30 top-0 px-6 py-1">
+          <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
+            <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl ">
+              Nossa loja
+            </h1>
+            <div className="flex items-center" id="store-nav-content">
+              <select
+                className="pl-3 inline-block no-underline hover:text-black"
+                onClick={this.handleClick}
+              >
+                <i className="fas fa-sort fa-lg"></i>
+                <option value="">Relevância</option>
+                <option value="">Preço: Menor para Maior</option>
+                <option value="">Preço: Maior para Menor</option>
+              </select>
+              <h1
+                className="pl-3 inline-block no-underline hover:text-black"
+                id="pesquisa"
+              >
+                <svg
+                  className="fill-current hover:text-black"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={24}
+                  height={24}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
+                </svg>
+              </h1>
+            </div>
+          </div>
         </nav>
-      <div>
-        <section className="bg-white py-8">
+        <div>
+          <section className="bg-white py-8">
             <h1 className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl text-center">
               Produtos novos:
             </h1>
-          <div className="container mx-auto flex items-center justify-center flex-wrap pt-4">
-            {newProdutos}
-          </div>
-        </section>
-      </div>
+            <div className="container mx-auto flex items-center justify-center flex-wrap pt-4">
+              {newProdutos}
+            </div>
+          </section>
+        </div>
       </div>
     );
   }

@@ -12,6 +12,6 @@ ReactDOM.render(
     </Router>,
   document.getElementById('root')
 );
-serviceWorker.register();
+serviceWorker.unregister();
 
 // mudar pra unregister depois

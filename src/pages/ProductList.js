@@ -6,7 +6,6 @@ import Inicial from "../components/inicial";
 import ScrollDown from "../components/scrollDown";
 
 import data from "../components/data/data";
-import dataNew from "../components/data/newdata";
 
 class ProductList extends Component {
   render() {
@@ -15,12 +14,20 @@ class ProductList extends Component {
         <Inicial />
         <ScrollDown href={"#shop"} />
         <div className="mt-48">
-        <NewProducts dataNew={dataNew} />
-        <Products data={data} />
+          <NewProducts
+            data={data.filter((produto) => {
+              return [1,2,3].includes(produto.id)
+            })}
+          />
+          <Products
+            data={data.filter((produto) => {
+              return ![1,2,3].includes(produto.id)
+            })}
+          />
         </div>
       </>
     );
-  }
+  } 
 }
 
 export default ProductList;
