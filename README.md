@@ -1,3 +1,3 @@
-# E-commerce website done with React.
+# E-commerce feito com React.
 
-This is a remaster of my another [e-commerce website](https://github.com/omgvito/TecnoShop).
+Esse é um remaster do meu outro [e-commerce](https://github.com/omgvito/TecnoShop).
